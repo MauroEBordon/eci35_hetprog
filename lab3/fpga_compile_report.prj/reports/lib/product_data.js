@@ -1,0 +1,1 @@
+var infoJSON={"compileInfo":{"nodes":[{"family":"Stratix 10, 1SX280HN2F43E2VG, intel_s10sx_pac:pac_s10","id":1,"name":"fpga_compile_report","product":"SYCL","quartus":"","time":"Thu Jul 28 16:46:50 2022","version":"2022.2.0 Build 133.4"}]}};

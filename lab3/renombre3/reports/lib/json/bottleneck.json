@@ -1,0 +1,108 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"Global variable"
+      , "id":15
+      , "src":"3"
+      , "dst":"6"
+      , "concurrency":"0"
+      , "type":"Occupancy limiter"
+      , "brief":"Data dependency"
+      , "loop":"optimized.B0"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Concurrency value: ":"0"
+          , "Loop feedback path that lowered occupancy: ":
+          [
+            {
+              "type":"text"
+              , "text":"ST(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                  , "line":"57"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":3
+          , "start":"15.00"
+          , "parent":"_ZTS9optimized.B0"
+          , "type":"inst"
+        }
+        , {
+          "name":"ST"
+          , "id":5
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                , "line":57
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":6
+          , "end":"50.00"
+          , "parent":"_ZTS9optimized.B0"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                , "line":1083
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":3
+          , "to":5
+        }
+        , {
+          "from":5
+          , "to":6
+        }
+        , {
+          "from":3
+          , "to":6
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

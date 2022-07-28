@@ -1,0 +1,168 @@
+{
+  "columns":
+  ["", "Pipelined", "II", "Speculated iterations", "Details"]
+  , "children":
+  [
+    {
+      "name":"Kernel: naive"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl.cc"
+            , "line":37
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Single work-item execution"
+        }
+        , {
+          "type":"text"
+          , "text":"Single work-item execution"
+        }
+        , {
+          "type":"text"
+          , "text":"Fmax bottlenck block: None"
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Kernels"
+              , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/ipp1476408832230.html"
+            }
+          ]
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"naive.B1"
+          , "data":
+          ["Yes", "~5", "0"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl.cc"
+                , "line":39
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":"Data dependency"
+            }
+            , {
+              "type":"text"
+              , "text":"Compiler failed to schedule this loop with smaller II due to data dependency on variable(s):"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"mul (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl.cc"
+                      , "line":"38"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Most critical loop feedback path during scheduling:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"5.00 clock cycles 32-bit Floating-point Multiply Operation (%L > %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                      , "line":"1079"
+                    }
+                    , {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl.cc"
+                      , "line":"40"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"II is an approximation due to the following stallable instruction:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Load Operation (%L > %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                      , "line":"1079"
+                    }
+                    , {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl.cc"
+                      , "line":"40"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Maximum concurrent iterations: Capacity of loop"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Use the %L viewer to estimate capacity"
+                  , "links":
+                  [
+                    {
+                      "view":"Fmax II Report"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Average Trip count: 1000000 (exact)"
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Loops in a Single Work-Item Kernel"
+                  , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/wfa1476380079940.html"
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -71,7 +71,7 @@ main(int argc, const char *argv[])
       auto sumr =
           sycl::ext::oneapi::reduction(sum_acc, sycl::ext::oneapi::plus<>());
 
-    });
+    }); 
     
 
     std::cout << "For " << steps << " steps, pi value: "

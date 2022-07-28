@@ -1,0 +1,227 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"Global variable"
+      , "id":89
+      , "src":"29"
+      , "dst":"32"
+      , "type":"fMAX/II"
+      , "brief":"Data dependency"
+      , "loop":"optimized.B2"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Estimated fmax reduced to: ":"432.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                  , "line":"44"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":29
+          , "start":"4.00"
+          , "parent":"_ZTS9optimized.B2"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                , "line":44
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"+"
+          , "id":31
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                , "line":44
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":32
+          , "end":"4.00"
+          , "parent":"_ZTS9optimized.B2"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                , "line":44
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":29
+          , "to":31
+        }
+        , {
+          "from":31
+          , "to":32
+        }
+        , {
+          "from":29
+          , "to":32
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"'mul'"
+      , "id":90
+      , "src":"58"
+      , "dst":"61"
+      , "type":"fMAX/II"
+      , "brief":"Data dependency"
+      , "loop":"optimized.B3"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"'mul'"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                  , "line":"41"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Estimated fmax reduced to: ":"480.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"f32 *(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                  , "line":"55"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"'mul'"
+          , "id":58
+          , "start":"6.00"
+          , "parent":"_ZTS9optimized.B3"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                , "line":55
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 *"
+          , "id":59
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                , "line":55
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":61
+          , "end":"6.00"
+          , "parent":"_ZTS9optimized.B3"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                , "line":55
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":58
+          , "to":59
+        }
+        , {
+          "from":59
+          , "to":61
+        }
+        , {
+          "from":58
+          , "to":61
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

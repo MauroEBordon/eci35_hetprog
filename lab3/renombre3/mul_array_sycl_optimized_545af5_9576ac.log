@@ -1,0 +1,4 @@
+Compiler Command: aoc -o /tmp/mul_array_sycl_optimized-545af5-9576ac.aocr /tmp/mul_array_sycl_optimized-4544c5-bf030f.spv -sycl -rtl -dep-files=/tmp/mul_array_sycl_optimized-dae8eb.d -output-report-folder=fpga_compile_report.prj -g -hardware -board=intel_s10sx_pac:pac_s10
+Compiler Warning: Argument 'arg0' on component 'typeinfo name for optimized' is never used by the component. Note that the compiler may optimize it away.
+System name: mul_array_sycl_optimized_545af5_9576ac
+

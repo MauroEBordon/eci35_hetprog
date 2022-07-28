@@ -1,0 +1,29 @@
+{
+  "nodes":
+  [
+    {
+      "name":"optimized"
+      , "id":1
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"optimized.B0"
+          , "id":2
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":4
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

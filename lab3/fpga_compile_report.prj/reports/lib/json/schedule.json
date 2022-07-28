@@ -1,0 +1,1121 @@
+{
+  "1":
+  {
+    "nodes":
+    [
+      {
+        "name":"optimized.B0"
+        , "id":2
+        , "start":"0"
+        , "end":"17"
+        , "details":
+        [
+          {
+            "type":"table"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Feedback"
+            , "id":5
+            , "start":"0"
+            , "end":"17"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Feedback Read"
+                , "Variable":"Unknown variable"
+                , "Max Fanout":"1"
+                , "Start Cycle":"0"
+                , "Latency":"17"
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
+        "name":"optimized.B2"
+        , "id":4
+        , "start":"17"
+        , "end":"898"
+        , "details":
+        [
+          {
+            "type":"table"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Cluster 1"
+            , "id":9
+            , "start":"17"
+            , "end":"53"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_zts9optimizeds_c0_enter51_k0_zts9optimized1"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Start Cycle":"0"
+                , "Cluster Latency":"36"
+              }
+            ]
+            , "type":"cluster"
+            , "children":
+            [
+              {
+                "name":"Global variable"
+                , "id":32
+                , "start":"21"
+                , "end":"21"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Feedback Read"
+                    , "Variable":"Global variable"
+                    , "Feedback FIFO Depth":"1"
+                    , "Feedback FIFO Width":"64"
+                    , "Max Fanout":"2"
+                    , "Start Cycle":"4"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":44
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"+"
+                , "id":34
+                , "start":"21"
+                , "end":"21"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"64-bit Integer Add"
+                    , "Constant Operand":"1 (0x1)"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"4"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":44
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"arg3"
+                , "id":29
+                , "start":"17"
+                , "end":"21"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'arg3'"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"0"
+                    , "Latency":"4"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"arg0"
+                , "id":30
+                , "start":"17"
+                , "end":"21"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'arg0'"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"0"
+                    , "Latency":"4"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Ptr. Comp."
+                , "id":31
+                , "start":"21"
+                , "end":"22"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Pointer Computation"
+                    , "Max Fanout":"4"
+                    , "Start Cycle":"4"
+                    , "Latency":"1"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                      , "line":930
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Ptr. Comp."
+                , "id":33
+                , "start":"21"
+                , "end":"22"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Pointer Computation"
+                    , "Max Fanout":"4"
+                    , "Start Cycle":"4"
+                    , "Latency":"1"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                      , "line":1686
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Exit"
+                , "id":27
+                , "start":"22"
+                , "end":"53"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"5"
+                    , "Latency":"3"
+                    , "Exit FIFO Depth":"512"
+                    , "Exit FIFO Width":"192"
+                    , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+                  }
+                ]
+                , "type":"inst"
+              }
+            ]
+          }
+          , {
+            "name":"LD"
+            , "id":10
+            , "start":"53"
+            , "end":"858"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Load"
+                , "Width":"32 bits"
+                , "LSU Style":"Burst-coalesced"
+                , "Stall-free":"No"
+                , "Global Memory":"Yes"
+                , "Max Fanout":"1"
+                , "Start Cycle":"36"
+                , "Latency":"805"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                  , "line":45
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Cluster 2"
+            , "id":11
+            , "start":"858"
+            , "end":"898"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_zts9optimizeds_c1_enter_k0_zts9optimized5"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Start Cycle":"841"
+                , "Cluster Latency":"40"
+              }
+            ]
+            , "type":"cluster"
+            , "children":
+            [
+              {
+                "name":"'cur,shift,mul'"
+                , "id":43
+                , "start":"866"
+                , "end":"866"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Feedback Read"
+                    , "Variable":"'cur,shift,mul'"
+                    , "Feedback FIFO Depth":"1"
+                    , "Feedback FIFO Width":"32"
+                    , "Max Fanout":"2"
+                    , "Start Cycle":"849"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":42
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Src"
+                , "id":52
+                , "start":"866"
+                , "end":"866"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Source"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"849"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":42
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"'shift'"
+                , "id":42
+                , "start":"865"
+                , "end":"865"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Feedback Read"
+                    , "Variable":"'shift'"
+                    , "Feedback FIFO Depth":"1"
+                    , "Feedback FIFO Width":"32"
+                    , "Max Fanout":"2"
+                    , "Start Cycle":"848"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":42
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Src"
+                , "id":51
+                , "start":"865"
+                , "end":"865"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Source"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"848"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":42
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"'shift'"
+                , "id":41
+                , "start":"864"
+                , "end":"864"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Feedback Read"
+                    , "Variable":"'shift'"
+                    , "Feedback FIFO Depth":"1"
+                    , "Feedback FIFO Width":"32"
+                    , "Max Fanout":"2"
+                    , "Start Cycle":"847"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":42
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Src"
+                , "id":50
+                , "start":"864"
+                , "end":"864"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Source"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"847"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":42
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"'shift'"
+                , "id":40
+                , "start":"863"
+                , "end":"863"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Feedback Read"
+                    , "Variable":"'shift'"
+                    , "Feedback FIFO Depth":"1"
+                    , "Feedback FIFO Width":"32"
+                    , "Max Fanout":"2"
+                    , "Start Cycle":"846"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":42
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Src"
+                , "id":49
+                , "start":"863"
+                , "end":"863"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Source"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"846"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":42
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"'shift'"
+                , "id":38
+                , "start":"862"
+                , "end":"862"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Feedback Read"
+                    , "Variable":"'shift'"
+                    , "Feedback FIFO Depth":"1"
+                    , "Feedback FIFO Width":"32"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"845"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":42
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"f32 *"
+                , "id":39
+                , "start":"862"
+                , "end":"867"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Floating-point Multiply"
+                    , "Max Fanout":"2"
+                    , "Start Cycle":"845"
+                    , "Latency":"5"
+                    , "Rounding Scheme":"IEEE-754 RNE Rounding"
+                    , "Implementation Preference":"Default DSP usage"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":45
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Src"
+                , "id":53
+                , "start":"867"
+                , "end":"867"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Source"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"850"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":45
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Exit"
+                , "id":36
+                , "start":"867"
+                , "end":"898"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"850"
+                    , "Latency":"3"
+                    , "Exit FIFO Depth":"512"
+                    , "Exit FIFO Width":"8"
+                    , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+                  }
+                ]
+                , "type":"inst"
+              }
+            ]
+          }
+        ]
+      }
+      , {
+        "name":"optimized.B1"
+        , "id":3
+        , "start":"898"
+        , "end":"965"
+        , "details":
+        [
+          {
+            "type":"table"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Cluster 0"
+            , "id":6
+            , "start":"898"
+            , "end":"947"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_preheader_zts9optimizeds_c0_enter_k0_zts9optimized0"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Start Cycle":"0"
+                , "Cluster Latency":"49"
+              }
+            ]
+            , "type":"cluster"
+            , "children":
+            [
+              {
+                "name":"FFwd Dest"
+                , "id":14
+                , "start":"899"
+                , "end":"899"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Destination"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"1"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":42
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Dest"
+                , "id":15
+                , "start":"899"
+                , "end":"899"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Destination"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"1"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":42
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"f32 *"
+                , "id":16
+                , "start":"899"
+                , "end":"904"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Floating-point Multiply"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"1"
+                    , "Latency":"5"
+                    , "Rounding Scheme":"IEEE-754 RNE Rounding"
+                    , "Implementation Preference":"Default DSP usage"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":56
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Dest"
+                , "id":17
+                , "start":"899"
+                , "end":"899"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Destination"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"1"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":42
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Dest"
+                , "id":18
+                , "start":"899"
+                , "end":"899"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Destination"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"1"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":42
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"f32 *"
+                , "id":19
+                , "start":"899"
+                , "end":"904"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Floating-point Multiply"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"1"
+                    , "Latency":"5"
+                    , "Rounding Scheme":"IEEE-754 RNE Rounding"
+                    , "Implementation Preference":"Default DSP usage"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":56
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"f32 *"
+                , "id":20
+                , "start":"905"
+                , "end":"910"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Floating-point Multiply"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"7"
+                    , "Latency":"5"
+                    , "Rounding Scheme":"IEEE-754 RNE Rounding"
+                    , "Implementation Preference":"Default DSP usage"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":56
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Dest"
+                , "id":21
+                , "start":"911"
+                , "end":"911"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Destination"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"13"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":45
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"f32 *"
+                , "id":22
+                , "start":"911"
+                , "end":"916"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Floating-point Multiply"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"13"
+                    , "Latency":"5"
+                    , "Rounding Scheme":"IEEE-754 RNE Rounding"
+                    , "Implementation Preference":"Default DSP usage"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                      , "line":56
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"arg7"
+                , "id":23
+                , "start":"898"
+                , "end":"916"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'arg7'"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"0"
+                    , "Latency":"18"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"arg4"
+                , "id":24
+                , "start":"898"
+                , "end":"916"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'arg4'"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"0"
+                    , "Latency":"18"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Ptr. Comp."
+                , "id":25
+                , "start":"916"
+                , "end":"916"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Pointer Computation"
+                    , "Max Fanout":"2"
+                    , "Start Cycle":"18"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/accessor.hpp"
+                      , "line":930
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Exit"
+                , "id":12
+                , "start":"916"
+                , "end":"947"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Max Fanout":"1"
+                    , "Start Cycle":"18"
+                    , "Latency":"3"
+                    , "Exit FIFO Depth":"512"
+                    , "Exit FIFO Width":"128"
+                    , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+                  }
+                ]
+                , "type":"inst"
+              }
+            ]
+          }
+          , {
+            "name":"ST"
+            , "id":7
+            , "start":"947"
+            , "end":"948"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Store"
+                , "Width":"32 bits"
+                , "LSU Style":"Burst-coalesced"
+                , "Stall-free":"No"
+                , "Global Memory":"Yes"
+                , "Max Fanout":"1"
+                , "Start Cycle":"49"
+                , "Latency":"1"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                  , "line":58
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":2
+        , "to":4
+      }
+      , {
+        "from":4
+        , "to":3
+      }
+      , {
+        "from":9
+        , "to":10
+      }
+      , {
+        "from":9
+        , "to":11
+      }
+      , {
+        "from":32
+        , "to":33
+      }
+      , {
+        "from":32
+        , "to":34
+      }
+      , {
+        "from":29
+        , "to":31
+      }
+      , {
+        "from":30
+        , "to":31
+      }
+      , {
+        "from":31
+        , "to":33
+      }
+      , {
+        "from":33
+        , "to":27
+      }
+      , {
+        "from":10
+        , "to":11
+      }
+      , {
+        "from":43
+        , "to":52
+      }
+      , {
+        "from":42
+        , "to":51
+      }
+      , {
+        "from":41
+        , "to":50
+      }
+      , {
+        "from":40
+        , "to":49
+      }
+      , {
+        "from":38
+        , "to":39
+      }
+      , {
+        "from":39
+        , "to":53
+      }
+      , {
+        "from":6
+        , "to":7
+      }
+      , {
+        "from":14
+        , "to":16
+      }
+      , {
+        "from":15
+        , "to":16
+      }
+      , {
+        "from":16
+        , "to":20
+      }
+      , {
+        "from":17
+        , "to":19
+      }
+      , {
+        "from":18
+        , "to":19
+      }
+      , {
+        "from":19
+        , "to":20
+      }
+      , {
+        "from":20
+        , "to":22
+      }
+      , {
+        "from":21
+        , "to":22
+      }
+      , {
+        "from":22
+        , "to":12
+      }
+      , {
+        "from":23
+        , "to":25
+      }
+      , {
+        "from":24
+        , "to":25
+      }
+      , {
+        "from":25
+        , "to":12
+      }
+    ]
+  }
+}

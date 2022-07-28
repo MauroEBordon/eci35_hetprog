@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/mul_array_sycl_optimized.dir/mul_array_sycl_optimized.o  -o mul_array_sycl_optimized 

@@ -1,0 +1,116 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"Global variable"
+      , "id":67
+      , "src":"32"
+      , "dst":"35"
+      , "type":"fMAX/II"
+      , "brief":"Data dependency"
+      , "loop":"optimized.B2"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Estimated fmax reduced to: ":"432.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                  , "line":"44"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":32
+          , "start":"4.00"
+          , "parent":"_ZTS9optimized.B2"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                , "line":44
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"+"
+          , "id":34
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                , "line":44
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":35
+          , "end":"4.00"
+          , "parent":"_ZTS9optimized.B2"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                , "line":44
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":32
+          , "to":34
+        }
+        , {
+          "from":34
+          , "to":35
+        }
+        , {
+          "from":32
+          , "to":35
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

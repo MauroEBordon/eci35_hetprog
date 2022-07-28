@@ -1,0 +1,4 @@
+/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/CMakeFiles/rebuild_cache.dir
+/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/CMakeFiles/edit_cache.dir
+/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/CMakeFiles/mul_array_sycl_optimized.dir
+/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/CMakeFiles/mul_array_sycl.dir

@@ -1,0 +1,116 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"'mul'"
+      , "id":43
+      , "src":"24"
+      , "dst":"26"
+      , "type":"fMAX/II"
+      , "brief":"Data dependency"
+      , "loop":"naive.B1"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"'mul'"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl.cc"
+                  , "line":"38"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Estimated fmax reduced to: ":"480.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"f32 *(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl.cc"
+                  , "line":"40"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"'mul'"
+          , "id":24
+          , "start":"845.00"
+          , "parent":"_ZTS5naive.B1"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl.cc"
+                , "line":40
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 *"
+          , "id":25
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl.cc"
+                , "line":40
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":26
+          , "end":"845.00"
+          , "parent":"_ZTS5naive.B1"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl.cc"
+                , "line":40
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":24
+          , "to":25
+        }
+        , {
+          "from":25
+          , "to":26
+        }
+        , {
+          "from":24
+          , "to":26
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

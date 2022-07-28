@@ -1,0 +1,206 @@
+<KERNEL_LIST>
+	<PROGRAM_GLOBAL_MEM_SIZE value="0" />
+	<ENABLE_HYPER_OPTIMIZATIONS value="1" />
+	<USE_SYNC_RESET value="1" />
+	<TOP_LEVEL_RESET_EXTENDER value="0" />
+	<ENABLE_STALL_LATENCY value="1" />
+	<ENABLE_ECC value="0" />
+	<GLOBAL_WRITE_LSU_IC_DATA_LATENESS value="0" />
+	<GLOBAL_READ_LSU_IC_DATA_LATENESS value="0" />
+	<GLOBAL_LSU_IC_WIDE_DATA_SLICING value="0" />
+	<ALLOW_HIGH_SPEED_FIFO_USAGE value="0" />
+	<KERNEL_BUNDLE name="_ZTS9optimized" kname="k0_ZTS9optimized" compute_units="1">
+	<KERNEL name="_ZTS9optimized" kname="k0_ZTS9optimized" filename="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_function_wrapper.sv" entity_name="k0_ZTS9optimized_function_wrapper" version="1" cosim_name="" enable_global_profiling="1" workgroup_invariant="1" workitem_invariant="0" has_global_atomics="0" num_vector_lanes="1" num_profiling_signals="0">
+		<RESOURCE_INFO>
+			<ID value="0" />
+			<AGGREGATE_STATIC_LOCAL_MEM_SIZE value="0" />
+			<MAX_WORK_GROUP_SIZE num="3" values="1, 1, 1" />
+			<REQUIRED_WORK_GROUP_SIZE x="1" y="1" z="1" />
+			<FAST_RELAUNCH_DEPTH value="1" />
+			<USES_GLOBAL_WORK_OFFSET value="1" />
+		</RESOURCE_INFO>
+		<CONFIGURATION>
+			<INTERFACE port="clock_reset" type="clock"/>
+			<INTERFACE port="cra_irq" type="irq"/>
+			<INTERFACE port="cra" type="agent" cosim_name="k0_ZTS9optimized_function_cra_agent" read="1" write="1" width="64" is_volatile="0" size="256" latency="0" />
+		</CONFIGURATION>
+		<REQUIREMENTS>
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/linux64/lib/dspba/Libraries/sv/base/dspba_library_ver.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_pkg.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_data_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_altera_syncram_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_scfifo_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_decoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_encoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_ram_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_staging_reg.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mid_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_one_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_zero_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo_zero_width.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_high_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_low_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_zero_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fanout_pipeline.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_std_synchronizer_nocut.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_threshold.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_reset_handler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_lfsr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mlab_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_parameter_assert.svh" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_pop_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_sync.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_desync.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ffwddst.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_buffer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_full_detector.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_decr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_top.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_permute_address.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_pipelined.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_enabled.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_basic_coalescer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_simple.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_host.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_bursting_load_stores.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_non_aligned_write.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_read_cache.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_atomic.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_prefetch_block.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_wide_wrapper.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming_prefetch.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_aligned_burst_coalesced_lsu.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_toggle_detect.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_debug_mem.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_write.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_read.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo_stall_valid_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_global_load_store.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_burst_coalescer.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_coalescer_dynamic_timeout.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_data_aligner.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_read_cache.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_read_data_alignment.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_unaligned_controller.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_word_coalescer.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_write_data_alignment.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_write_kernel_downstream.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_shift_register_no_reset.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_push_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fast_pipeline.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_push.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_token_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_loop_admit.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_shift_register_no_reset_dont_merge.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ffwdsrc.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_loop_profiler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_sim_latency_tracker.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_clock2x_holder.v" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_function_wrapper.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_function.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_bb_ZTS9optimized_B0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_ZTS9optimized_B0_branch.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_ZTS9optimized_B0_merge.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_ZTS9optimized_B0_merge_storage.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_bb_ZTS9optimized_B0_stall_region.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_pop_throttl0000op_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_bb_ZTS9optimized_B1.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_ZTS9optimized_B1_branch.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_ZTS9optimized_B1_branch_branch_storage.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_ZTS9optimized_B1_merge.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_ZTS9optimized_B1_merge_storage.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_bb_ZTS9optimized_B1_stall_region.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_mem_memdep_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_push_token_0000sh_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_sfc_s_c0_in_preheader0000er_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_sfc_exit_s_0000it_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_sfc_exit_s_0000mized1_full_detector.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_sfc_exit_s_0000optimized1_data_fifo.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_sfc_logic_s_c0_in_pre0000er_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_ffwd_dest_f000004_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_ffwd_dest_f000001_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_ffwd_dest_f000003_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_ffwd_dest_f000002_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_ffwd_dest_f0000d1_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_sync_buffer0000er_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_flt_i_sfc_logic_s_c0_in0000b0c2463a0054c2a6355y.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_sync_buffer0001er_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_bb_ZTS9optimized_B2.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_ZTS9optimized_B2_branch.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_ZTS9optimized_B2_merge.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_ZTS9optimized_B2_merge_storage.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_bb_ZTS9optimized_B2_stall_region.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_mem_unnamed0000d6_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_sfc_s_c0_in_zts9optim000051_k0_zts9optimized1.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_sfc_exit_s_0000t8_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_sfc_exit_s_0001mized1_full_detector.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_sfc_exit_s_0001optimized1_data_fifo.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_sfc_logic_s_c0_in_zts000051_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_dummy_threa0000my_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_forked_zts90000ed_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_pipeline_ke0000ng_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_push_i1_not0000nd_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_sync_buffer0002er_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_sync_buffer0003er_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_sfc_s_c1_in_zts9optim0000er_k0_zts9optimized5.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_sfc_exit_s_0001it_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_sfc_exit_s_0002mized1_full_detector.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_sfc_exit_s_0002optimized1_data_fifo.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_sfc_logic_s_c1_in_zts0000er_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_ffwd_source000010_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_ffwd_source000011_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_ffwd_source0000d7_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_ffwd_source0000d8_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_i_llvm_fpga_ffwd_source0000d9_k0_zts9optimized0.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_flt_i_sfc_logic_s_c1_in0000742c246j22644ck2975u.sv" />
+			<FILE name="kernel_hdl/k0_ZTS9optimized/k0_ZTS9optimized_function_cra_agent.sv" />
+		</REQUIREMENTS>
+		<DATA>
+			<INTERFACE port="memdep_k0_ZTS9optimized" cosim_name="" type="host" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="write" criticality="0" buffer_location="DDR" group_id="0" connected_to_agent="0" />
+			<INTERFACE port="unnamed_k0_ZTS9optimized6_k0_ZTS9optimized" cosim_name="" type="host" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="255" buffer_location="DDR" group_id="0" connected_to_agent="0" />
+		</DATA>
+		<KERNEL_ARGS>
+			<ARGUMENT name="arg0" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" alignment="1024" type_qualifier="" access_qualifier="none" type_name="float*" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg1" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg2" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg3" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg4" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" alignment="1024" type_qualifier="" access_qualifier="none" type_name="float*" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg5" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg6" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg7" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+		</KERNEL_ARGS>
+		<IPS>
+		</IPS>
+		<PRINTF_FORMAT_STRINGS>
+		</PRINTF_FORMAT_STRINGS>
+		<PRINTF_INTERFACES>
+		</PRINTF_INTERFACES>
+	</KERNEL>
+	</KERNEL_BUNDLE>
+	<GLOBAL_MEM_LATENCY kernel_side_mem_latency="8" arbitration_latency="5" />
+	<STRUCT_TYPE_DEFS>
+	</STRUCT_TYPE_DEFS>
+	<KERNEL_INTERCONNECT>
+		<USM_INTERCONNECT value="0" />
+		<GLOBAL_ATOMICS value="0" />
+		<GLOBAL_INTERCONNECT gmem_id="0" name="DDR" type="1" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_WRITES memory="DDR" aspace="1024" />
+	</KERNEL_INTERCONNECT>
+</KERNEL_LIST>

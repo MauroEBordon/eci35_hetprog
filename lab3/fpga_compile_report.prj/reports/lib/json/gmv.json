@@ -1,0 +1,291 @@
+{
+  "nodes":
+  [
+    {
+      "name":"DDR"
+      , "id":77
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Interleaving":"Yes"
+          , "Interleave Size":"4096 bytes"
+          , "Channels":"4 channels"
+          , "Maximum bandwidth the BSP can deliver":"76800.00 MB/s<br><small><i> Note: Realistic maximum bandwidth is about 90% of the above due to loss from interconnect and memory controller.</i></small>"
+          , "Channel DDR Width (bits)":"512, 512, 512, 512"
+        }
+      ]
+      , "type":"memsys"
+      , "children":
+      [
+        {
+          "name":"channel 0"
+          , "id":79
+          , "type":"bb"
+        }
+        , {
+          "name":"channel 1"
+          , "id":80
+          , "type":"bb"
+        }
+        , {
+          "name":"channel 2"
+          , "id":81
+          , "type":"bb"
+        }
+        , {
+          "name":"channel 3"
+          , "id":82
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"Memory Controller"
+      , "id":78
+      , "parent":"77"
+      , "bw":"76800.00"
+      , "num_channels":"4"
+      , "interleave":"1"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Maximum bandwidth the BSP can deliver":"76800.00 MB/s<br><small><i> Note: Realistic maximum bandwidth is about 90% of the above due to loss from interconnect and memory controller.</i></small>"
+        }
+      ]
+      , "type":"bb"
+    }
+    , {
+      "name":"Global Memory Interconnect"
+      , "id":83
+      , "parent":"77"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"SHARE"
+          , "id":84
+          , "type":"arb"
+        }
+        , {
+          "name":"Write Interconnect"
+          , "id":87
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Name":"DDR"
+              , "Interconnect Style":"ring"
+              , "Writes":"1"
+              , "User specified force-single-store-ring flag":"False"
+              , "Store Rings":"4"
+            }
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"Read Interconnect"
+          , "id":85
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Name":"DDR"
+              , "Interconnect Style":"ring"
+              , "Reads":"1"
+            }
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"Read Interconnect Router"
+          , "id":86
+          , "details":
+          [
+            {
+              "type":"table"
+              , "User specified num-reorder flag":"Unset"
+            }
+          ]
+          , "type":"memsys"
+          , "children":
+          [
+            {
+              "name":"Bus 0"
+              , "id":92
+              , "type":"memsys"
+            }
+            , {
+              "name":"Bus 1"
+              , "id":93
+              , "type":"memsys"
+            }
+            , {
+              "name":"Bus 2"
+              , "id":94
+              , "type":"memsys"
+            }
+            , {
+              "name":"Bus 3"
+              , "id":95
+              , "type":"memsys"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Global Memory Loads"
+      , "id":90
+      , "parent":"77"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"LD"
+          , "id":91
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"36"
+              , "Latency":"805 cycles"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Caching":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"optimized"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                , "line":45
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+    , {
+      "name":"Global Memory Stores"
+      , "id":88
+      , "parent":"77"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"ST"
+          , "id":89
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"49"
+              , "Latency":"1 cycle"
+              , "Width":"32 bits"
+              , "DDR Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+              , "Kernel":"optimized"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/Escritorio/t3/eci35_hetprog/lab3/mul_array_sycl_optimized.cc"
+                , "line":58
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":79
+      , "to":78
+    }
+    , {
+      "from":78
+      , "to":79
+    }
+    , {
+      "from":80
+      , "to":78
+    }
+    , {
+      "from":78
+      , "to":80
+    }
+    , {
+      "from":81
+      , "to":78
+    }
+    , {
+      "from":78
+      , "to":81
+    }
+    , {
+      "from":82
+      , "to":78
+    }
+    , {
+      "from":78
+      , "to":82
+    }
+    , {
+      "from":85
+      , "to":84
+    }
+    , {
+      "from":87
+      , "to":84
+    }
+    , {
+      "from":84
+      , "to":78
+    }
+    , {
+      "from":89
+      , "to":87
+    }
+    , {
+      "from":91
+      , "to":85
+    }
+    , {
+      "from":78
+      , "to":92
+    }
+    , {
+      "from":78
+      , "to":93
+    }
+    , {
+      "from":78
+      , "to":94
+    }
+    , {
+      "from":78
+      , "to":95
+    }
+    , {
+      "from":92
+      , "to":91
+      , "reverse":1
+    }
+  ]
+}

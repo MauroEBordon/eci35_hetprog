@@ -1,0 +1,52 @@
+{
+  "nodes":
+  [
+    {
+      "name":"optimized"
+      , "id":1
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"optimized.B0"
+          , "id":2
+          , "type":"bb"
+        }
+        , {
+          "name":"optimized.B1"
+          , "id":3
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":6
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"optimized.B2"
+          , "id":4
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":9
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 2"
+              , "id":11
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}
