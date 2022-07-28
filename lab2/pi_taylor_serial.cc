@@ -6,8 +6,15 @@ using my_float = float;
 
 auto pi_taylor(size_t steps) -> my_float {
 
-    // please complete
+    my_float pi = 0.0;
+    my_float sign = 1.0;
+    for(size_t i = 0; i<steps;i++){
+        my_float n = (my_float) i; 
+        pi +=  sign/((2*n)+1);
+        sign = -sign;
+    }
 
+    return 4.0*pi;
 }
 
 int main(int argc, const char *argv[]) {

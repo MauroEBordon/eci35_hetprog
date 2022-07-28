@@ -1,5 +1,7 @@
+
 #include <CL/sycl.hpp>
 
+#include <algorithm>
 #include <chrono>
 #include <iomanip>
 #include <iostream>
@@ -37,19 +39,18 @@ main(int argc, const char *argv[])
         exit(1);
     }
 
-    auto steps = std::stoll(argv[1]);
-
+    size_t steps = std::stoll(argv[1]);
 
     sycl::default_selector device_selector;
     sycl::queue q(device_selector);
 
-    auto work_group_size = q.get_device().get_info<cl::sycl::info::device::max_work_group_size>();
+    size_t work_group_size = q.get_device().get_info<cl::sycl::info::device::max_work_group_size>();
 
     if (steps < work_group_size ) {
         std::cerr << "The number of steps should be larger than " << work_group_size << std::endl;
         exit(1);
-
     }
+
     std::vector<my_float> parts(steps);
     {
 		buffer bufparts{parts};
@@ -62,8 +63,16 @@ main(int argc, const char *argv[])
 		});
 	}
 
-    my_float pi = 4.0 * std::accumulate(parts.begin(), parts.end(), 0.0);
+    my_float pi = 0.0;
 
+    q.submit([&](auto &h) {
+      sycl::accessor buf_acc(buf, h, sycl::read_only);
+      sycl::accessor sum_acc(sum_buf, h, sycl::read_write, sycl::no_init);
+      auto sumr =
+          sycl::ext::oneapi::reduction(sum_acc, sycl::ext::oneapi::plus<>());
+
+    });
+    
 
     std::cout << "For " << steps << " steps, pi value: "
         << std::setprecision(std::numeric_limits<long double>::digits10 + 1)
